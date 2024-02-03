@@ -32,6 +32,13 @@ navLink.forEach(link => {
 });
 /*=============== ADD BLUR HEADER ===============*/
 
+const blurHeaders = () => {
+    const header = document.getElementById('header')
+    // When the scroll greater than 50 viewport , add scroll header clsss to the header tag
+    this.scrollY >= 50 ? header.classList.add('blur-header') : header.classList.remove('blur-header')
+}
+window.addEventListener('scroll', blurHeaders)
+
 
 /*=============== SHOW SCROLL UP ===============*/ 
 

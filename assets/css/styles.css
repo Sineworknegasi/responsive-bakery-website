@@ -165,11 +165,6 @@ img {
   cursor: pointer;
 }
 
-.nav__list {
-  display: flex;
-  flex-direction: row;
-  column-gap: 2.5rem;
-}
 
 /* Navigation for mobile devices */
 
@@ -235,6 +230,19 @@ img {
 }
 
 /* Add blur header */
+
+.blur-header::after {
+  content: '';
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(0, 0%, 6%, .2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); /* for safari */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
 
 /* Active link */
@@ -356,6 +364,8 @@ img {
 .button:hover {
   background-color: var(--first-color-alt);
 }
+
+
 /*=============== NEW ===============*/
 
 
